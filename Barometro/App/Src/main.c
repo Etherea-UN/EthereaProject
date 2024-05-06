@@ -269,40 +269,6 @@ void parseCommands(char *ptrBufferReception){
 		 */
 		BMP085();
 
-		/* Se calcula la altura (que posteriormente se mostrará) según el valor de
-		 * la presión atmosférica medida ppor el Bar
-		 */
-
-		//Se debe buscar una fórmula para la altura que sí funcione
-
-		/* Presentación de los datos correspondientes a aceleración, ángulo de rotación,
-		 * presión atmosférica, temperatura y altura del dispositivo
-		 */
-
-		//Accel X
-		sprintf(bufferData, "\nLa aceleración en X es: %.2f m/s² \n", ((float)AccelX*converFactAcc)-0.54);
-		writeMsg(&handlerUsart1, bufferData);
-
-		//Accel Y
-		sprintf(bufferData, "\nLa aceleración en Y es: %.2f m/s² \n", ((float)AccelY*converFactAcc)+0.15);
-		writeMsg(&handlerUsart1, bufferData);
-
-		//Accel Z
-		sprintf(bufferData, "\nLa aceleración en Z es: %.2f m/s² \n", ((float)AccelZ*converFactAcc)+0.47);
-		writeMsg(&handlerUsart1, bufferData);
-
-		//Gyro X
-		sprintf(bufferData, "\nEl ángulo en X es: %.2f ° \n", (float)GyrX*converFactGyr);
-		writeMsg(&handlerUsart1, bufferData);
-
-		//Gyro Y
-		sprintf(bufferData, "\nEl ángulo en Y es: %.2f ° \n", (float)GyrY*converFactGyr);
-		writeMsg(&handlerUsart1, bufferData);
-
-		//Gyro Z
-		sprintf(bufferData, "\nEl ángulo en Z es: %.2f °\n", (float)GyrZ*converFactGyr);
-		writeMsg(&handlerUsart1, bufferData);
-
 		//Presión
 		sprintf(bufferData, "\nLa presión es: %.2f hPa \n", (float)Press);
 		writeMsg(&handlerUsart1, bufferData);
