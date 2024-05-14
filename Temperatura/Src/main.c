@@ -1,4 +1,4 @@
-
+//configuracion de sensor temperatura falla lectura de datos
 #include <stdint.h>
 #include <stdio.h>
 #include <stdbool.h>
